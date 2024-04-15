@@ -3,9 +3,12 @@
 const AboutUs = () => {
   return (
     <div className="bg-fuchsia-300 rounded-lg py-8">
-      <h2 className="text-center font-bold text-3xl text-white">About Us</h2>
+      <h2 data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" className="text-center font-bold text-3xl text-white">About Us</h2>
 
-      <section className="text-white">
+      <section data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="text-white">
         <div className="container px-6 py-12 mx-auto">
           <div className="grid items-center gap-4 xl:grid-cols-5">
             <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">

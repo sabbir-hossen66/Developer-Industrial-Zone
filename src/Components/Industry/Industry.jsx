@@ -6,7 +6,7 @@ const Industry = ({ industry }) => {
   const { id, estate_title, segment_name, description, status, price, area, location, image } = industry
   return (
     <div>
-      <div className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800  border border-2px-solid border-gray-200 p-2 align-items">
+      <div data-aos="flip-right" className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800  border border-2px-solid border-gray-200 p-2 align-items">
         <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
         <div className="flex flex-col justify-between p-6 space-y-8">
           <div className="space-y-2">

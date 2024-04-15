@@ -4,14 +4,27 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-
 import bannerOne from '../../assets/images/banner1.jpg'
 import bannerTwo from '../../assets/images/banner2.jpg'
 import bannerThree from '../../assets/images/banner3.jpg'
 
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      offset: 100,
+      once: true
+    });
+  }, []);
+
+
   return (
-    <div className='py-8 text-white'>
+    <div data-aos="zoom-in" className='py-8 text-white'>
       <Swiper
         pagination={{
           type: 'fraction',

@@ -3,8 +3,8 @@
 const Review = () => {
   return (
     <div>
-      <h2 className="text-3xl pt-16  text-center font-bold text-fuchsia-500">Our Customers Review</h2>
-      <div className="grid grid-cols-3 gap-4 rounded-md py-10 ">
+      <h2 data-aos="zoom-out-down" className="text-3xl pt-16  text-center font-bold text-fuchsia-500">Our Customers Review</h2>
+      <div data-aos="zoom-out-up" className="grid grid-cols-3 gap-4 rounded-md py-10 ">
 
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
           <div className="flex justify-between p-4">

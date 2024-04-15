@@ -3,7 +3,20 @@ import photo from '../../assets/images/profile.png'
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Header = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: 'ease-in-out',
+      offset: 100,
+      once: true
+    });
+  }, []);
 
   const { user, logOut } = useContext(AuthContext)
   console.log(user);
@@ -22,7 +35,7 @@ const Header = () => {
   </>
 
   return (
-    <div className="navbar bg-base-100 py-4">
+    <div data-aos="fade-down" className="navbar bg-base-100 py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
