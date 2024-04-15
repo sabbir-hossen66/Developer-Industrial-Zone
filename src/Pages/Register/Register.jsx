@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 
 
 const Register = () => {
-  const [err, setErr] = useState('')
+  const [nameErr, nameSetErr] = useState('')
+  const [urlErr, urlSetErr] = useState('')
+  const [emailErr, emailSetErr] = useState('')
+  const [PasswordErr, PasswordSetErr] = useState('')
 
 
   const handleSignUP = (e) => {
@@ -21,20 +24,38 @@ const Register = () => {
 
 
     // error handle
+    if (!name) {
+      nameSetErr('Please fullfill your name')
+      return;
+    }
+    nameSetErr('')
+
+    if (!photo) {
+      urlSetErr('Please give us url')
+      return;
+    }
+    urlSetErr('')
+    if (!email) {
+      emailSetErr('please write your email')
+      return;
+    }
+    emailSetErr('')
 
     if (password.length < 6) {
-      setErr('Create atleast 6 digit password')
-      return;
-    }
-    else if (!/[A-Z]/.test(password)) {
-      setErr('Atleast one letter should be Uppercase')
-      return
-    }
-    else if (!/[a-z]/.test(password)) {
-      setErr('Atleast one letter should e Lowercase')
+      PasswordSetErr('Create atleast 6 digit password')
       return;
     }
 
+    else if (!/[A-Z]/.test(password)) {
+      PasswordSetErr('Atleast one letter should be Uppercase')
+      return
+    }
+
+    else if (!/[a-z]/.test(password)) {
+      PasswordSetErr('Atleast one letter should e Lowercase')
+      return;
+    }
+    PasswordSetErr('')
   }
 
   return (
@@ -45,14 +66,18 @@ const Register = () => {
         <div className="space-y-1 text-sm">
           <label className="block dark:text-gray-300">Name</label>
           <input type="name" name="name" id="name" placeholder="name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-default-600" />
+          <p className=' text-red-500'>{nameErr}</p>
         </div>
         <div className="space-y-1 text-sm">
           <label className="block dark:text-gray-300">Photo URL</label>
           <input type="text" name="photo URL" id="photo URL" placeholder="photo URL" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-default-600" />
+          <p className='text-red-500'>{urlErr}</p>
         </div>
         <div className="space-y-1 text-sm">
           <label className="block dark:text-gray-300">Email</label>
-          <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-default-600" required />
+          <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-default-600" />
+
+          <p className='text-red-500'>{emailErr}</p>
         </div>
         <div className="space-y-1 text-sm">
           <label className="block dark:text-gray-300">Password</label>
@@ -60,7 +85,7 @@ const Register = () => {
           <div className="flex justify-end text-xs dark:text-gray-300">
             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
           </div>
-          <p className='text-red-500'>{err}</p>
+          <p className='text-red-500'>{PasswordErr}</p>
         </div>
         <input type="submit" value="sign in" className="cursor-pointer block w-1/4 mx-auto p-3 text-center rounded-xl dark:text-gray-50 dark:bg-gray-600" />
         {/* <input type="submit" value="submit" /> */}
