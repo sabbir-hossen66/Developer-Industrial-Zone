@@ -1,11 +1,13 @@
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 
 
 const Login = () => {
+  const [loginError, setLoginError] = useState('')
+  const [loginSuccess, setLoginSuccess] = useState('')
 
   const { signIn } = useContext(AuthContext)
 
@@ -16,13 +18,17 @@ const Login = () => {
     const form = new FormData(e.currentTarget);
     const email = form.get('email')
     const password = form.get('password')
+    // loginError('')
+    // loginSuccess('')
 
     signIn(email, password)
       .then(result => {
         console.log(result.user);
+        setLoginSuccess('Login successfully', result.user)
       })
       .catch(error => {
         console.error(error.messege)
+        setLoginError('error.messege')
       })
 
   }
@@ -73,6 +79,12 @@ const Login = () => {
       <p className="text-xs text-center sm:px-6 dark:text-gray-300">Dont have an account?
         <Link to={'/register'} rel="noopener noreferrer" href="#" className="underline text-yellow-500 font-bold ml-1">Register</Link>
       </p>
+
+      {
+        loginError ? <p className="text-red-400 font-bold">password is wrong</p> :
+          loginSuccess && <p className="text-green-400"> succesfully</p>
+      }
+
     </div>
   );
 };

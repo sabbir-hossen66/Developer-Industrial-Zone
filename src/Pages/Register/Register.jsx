@@ -7,8 +7,10 @@ import { AuthContext } from '../../Providers/AuthProviders';
 
 const Register = () => {
 
-  // use context
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
 
+  // use context
   const { createUser } = useContext(AuthContext)
   console.log(createUser);
 
@@ -34,10 +36,12 @@ const Register = () => {
       .then(result => {
         const man = result.user;
         console.log(man);
+        setSuccess('succesfully created !', result.user)
       })
       .catch(error => {
         const errorMessege = error.messege;
         console.log(errorMessege);
+        setError(error.message)
       })
 
 
@@ -134,6 +138,10 @@ const Register = () => {
       <p className="text-xs text-center sm:px-6 dark:text-gray-300">Dont have an account?
         <Link to={'/login'} rel="noopener noreferrer" href="#" className="underline text-yellow-500 font-bold ml-1">Login</Link>
       </p>
+      {
+        error ? <p className="text-red-500">{error}</p> :
+          success && <p className="text-2xl text-green-500">{success}</p>
+      }
     </div>
 
   );
