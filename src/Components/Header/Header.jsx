@@ -16,7 +16,7 @@ const Header = () => {
 
   const navLinks = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/about'}>About</NavLink></li>
+    <li><NavLink to={'/contact'}>Contact</NavLink></li>
     <li><NavLink to={'/up-profile'}>Update Profile</NavLink></li>
     {/* <li><NavLink to={'/login'}>Login</NavLink></li> */}
   </>
@@ -69,16 +69,6 @@ const Header = () => {
             </div>
         }
 
-        {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img alt="Tailwind CSS Navbar component" src={photo} />
-          </div>
-        </div> */}
-        {/* <Link to='/login'>
-          <button type="button" className="relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Login
-
-          </button>
-        </Link> */}
       </div>
     </div>
   );

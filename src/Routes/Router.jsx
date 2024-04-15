@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import IndustryDetail from "../Pages/IndustryDetail/IndustryDetail";
 import PrivetRoute from "./PrivetRoute";
+import Contact from "../Pages/Contact/Contact";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -23,8 +24,8 @@ export const router = createBrowserRouter([
         loader: () => fetch('/api.json')
       },
       {
-        path: "/about",
-        element: <div>about section</div>,
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/up-profile",
