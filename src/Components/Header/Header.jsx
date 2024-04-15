@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import photo from '../../assets/images/profile.png'
 
 const Header = () => {
 
@@ -20,7 +21,7 @@ const Header = () => {
             {navLinks}
           </ul>
         </div>
-        <p className=" text-3xl font-bold cursor-pointer "><span className="text-violet-600">Dev Industrial</span> <span className="text-fuchsia-600"> Zone</span></p>
+        <p className=" text-3xl font-bold cursor-pointer "><span className="text-violet-600">Dev Industrial</span>_ <span className="text-fuchsia-600">Zone</span></p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
@@ -30,7 +31,7 @@ const Header = () => {
       <div className="navbar-end">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img alt="Tailwind CSS Navbar component" src={''} />
+            <img alt="Tailwind CSS Navbar component" src={photo} />
           </div>
         </div>
         <Link to='/login'>
