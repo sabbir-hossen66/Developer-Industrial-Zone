@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Sunrise Industrial Park",
+    "segment_name": "Manufacturing and Warehousing",
+    "description": "Sunrise Industrial Park offers state-of-the-art facilities for manufacturing and warehousing purposes. Strategically located for easy access to major highways and transportation hubs, it's the ideal location for businesses looking to expand their operations.",
+    "status": "sale",
+    "price": "$2,500,000",
+    "area": "200,000 sq ft",
+    "location": "123 Industrial Avenue, Cityville, State",
+    "image": "https://i.ibb.co/kcDWcmT/ind1.jpg",
+    "facilities": [
+      "Loading docks",
+      "24/7 security surveillance",
+      "Ample parking space",
+      "Modern office spaces",
+      "High-speed internet connectivity"
+    ]
+  },
+  {
+    "id": 2,
+    "estate_title": "GreenTech Business Park",
+    "segment_name": "Technology and Innovation",
+    "description": "GreenTech Business Park is a hub for technology-driven companies seeking cutting-edge facilities and a collaborative environment. With LEED-certified buildings and sustainable practices, it's the perfect choice for forward-thinking businesses.",
+    "status": "rent",
+    "price": "$10,000/month",
+    "area": "150,000 sq ft",
+    "location": "456 Innovation Avenue, Techville, State",
+    "image": "https://i.ibb.co/JKsBc50/ind2.jpg",
+    "facilities": [
+      "Fiber-optic internet",
+      "Conference rooms",
+      "On-site cafeteria",
+      "Fitness center",
+      "Outdoor recreational areas"
+    ]
+  },
+  {
+    "id": 3,
+    "estate_title": "MetroWare Industrial Complex",
+    "segment_name": "Logistics and Distribution",
+    "description": "MetroWare Industrial Complex offers premium logistics and distribution facilities with advanced warehousing solutions. Strategically positioned near major transport routes, it ensures efficient supply chain operations for businesses of all sizes.",
+    "status": "sale",
+    "price": "$5,000,000",
+    "area": "300,000 sq ft",
+    "location": "789 Logistics Boulevard, Metrocity, State",
+    "image": "https://i.ibb.co/2nxtC9X/ind3.jpg",
+    "facilities": [
+      "Truck bays",
+      "Cold storage facilities",
+      "Cross-docking capabilities",
+      "Security fencing",
+      "Advanced inventory management systems"
+    ]
+  },
+  {
+    "id": 4,
+    "estate_title": "Oceanic Manufacturing",
+    "segment_name": "Heavy Industries",
+    "description": "Oceanic Manufacturing Park caters to heavy industries with specialized facilities and infrastructure. From heavy machinery to large-scale manufacturing, it provides the necessary resources for businesses to thrive in the industrial sector.",
+    "status": "rent",
+    "price": "$15,000/month",
+    "area": "400,000 sq ft",
+    "location": "101 Industrial Highway, Oceancity, State",
+    "image": "https://i.ibb.co/hyqq2J9/ind4.jpg",
+    "facilities": [
+      "High-capacity cranes",
+      "Industrial-grade utilities",
+      "Large-scale assembly areas",
+      "Heavy-duty vehicle access",
+      "Safety training facilities"
+    ]
+  },
+  {
+    "id": 5,
+    "estate_title": "TechHub Industrial Campus",
+    "segment_name": "Research and Development",
+    "description": "TechHub Industrial Campus is dedicated to research and development activities, providing specialized labs, collaborative workspaces, and access to cutting-edge technology. It fosters innovation and creativity for businesses pushing the boundaries of technology.",
+    "status": "sale",
+    "price": "$8,000,000",
+    "area": "250,000 sq ft",
+    "location": "789 Research Drive, Techville, State",
+    "image": "https://i.ibb.co/B4P8GWm/ind5.webp",
+    "facilities": [
+      "Research laboratories",
+      "Prototype development areas",
+      "Tech incubation center",
+      "Collaborative workspaces",
+      "Access to tech talent pool"
+    ]
+  },
+  {
+    "id": 6,
+    "estate_title": "Gateway Industrial Estate",
+    "segment_name": "Distribution and Warehousing",
+    "description": "Gateway Industrial Estate is strategically located as a distribution hub, providing efficient access to major transportation routes and logistics networks. With modern warehousing facilities, it serves businesses looking to streamline their supply chain operations.",
+    "status": "rent",
+    "price": "$12,000/month",
+    "area": "180,000 sq ft",
+    "location": "321 Gateway Road, Logistictown, State",
+    "image": "https://i.ibb.co/N6WkjNV/ind6.webp",
+    "facilities": [
+      "Cross-docking facilities",
+      "Temperature-controlled storage",
+      "Advanced inventory management systems",
+      "On-site maintenance services",
+      "Truck staging areas"
+    ]
+  }
+]
