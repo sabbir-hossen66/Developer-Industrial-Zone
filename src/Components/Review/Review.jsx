@@ -3,8 +3,8 @@
 const Review = () => {
   return (
     <div>
-      <h2 className="text-3xl pt-16 pb-8 text-center font-bold text-fuchsia-500">Our Customers Review</h2>
-      <div className="grid grid-cols-3 gap-4 rounded-md">
+      <h2 className="text-3xl pt-16  text-center font-bold text-fuchsia-500">Our Customers Review</h2>
+      <div className="grid grid-cols-3 gap-4 rounded-md py-10 ">
 
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
           <div className="flex justify-between p-4">
@@ -13,7 +13,7 @@ const Review = () => {
                 <img src="https://source.unsplash.com/100x100/?portrait" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
               </div>
               <div>
-                <h4 className="font-bold">Jesika</h4>
+                <h4 className="font-bold">Mou</h4>
                 <span className="text-xs dark:text-gray-600">2 days ago</span>
               </div>
             </div>
@@ -36,7 +36,7 @@ const Review = () => {
                 <img src="https://source.unsplash.com/100x100/?portrait" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
               </div>
               <div>
-                <h4 className="font-bold">Jesika</h4>
+                <h4 className="font-bold">Henry</h4>
                 <span className="text-xs dark:text-gray-600">2 days ago</span>
               </div>
             </div>
