@@ -6,11 +6,11 @@ const Header = () => {
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/about'}>About</NavLink></li>
     <li><NavLink to={'/up-profile'}>Update Profile</NavLink></li>
-    <li><NavLink to={'/login'}>Login</NavLink></li>
+    {/* <li><NavLink to={'/login'}>Login</NavLink></li> */}
   </>
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const Header = () => {
             {navLinks}
           </ul>
         </div>
-        <p className=" text-2xl font-bold cursor-pointer "><span className="text-violet-600">Dev Industrial</span> <span className="text-fuchsia-600"> Zone</span></p>
+        <p className=" text-3xl font-bold cursor-pointer "><span className="text-violet-600">Dev Industrial</span> <span className="text-fuchsia-600"> Zone</span></p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
