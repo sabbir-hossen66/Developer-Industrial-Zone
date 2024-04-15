@@ -10,8 +10,9 @@ const IndustryDetail = () => {
 
 
   return (
-    <div>
-      <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800">
+
+    <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800 mx-auto p-6">
+      <div>
         <img src={image} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
         <div className="p-3">
           <div className="flex items-center justify-between">
@@ -39,45 +40,49 @@ const IndustryDetail = () => {
             </button>
           </div>
 
-          <div className="space-y-3">
-            <p className="text-sm">
-              <span className="text-base font-bold">estate_title: </span>{estate_title}
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">segment_name: </span>{segment_name}
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">area: </span>{area}
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">location: </span>{location}
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">status: </span>{status}
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">price: </span>{price}
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">facilities: </span>{
-                facilities.map((facility, idx) => <li key={idx}>
 
-                  {facility}
-
-                </li>)
-              }
-            </p>
-            <p className="text-sm">
-              <span className="text-base font-bold">description: </span>{description}
-            </p>
-            {/* <p className="text-sm">
-              <span className="text-base font-bold">status: </span>{status}
-            </p> */}
-            <input type="text" placeholder="Add a comment..." className="w-full py-0.5 dark:bg- border-none rounded text-sm pl-0 dark:text-gray-800" />
-          </div>
         </div>
       </div>
+
+      <div className="space-y-3">
+        <p className="text-sm">
+          <span className="text-base font-bold">estate_title: </span>{estate_title}
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">segment_name: </span>{segment_name}
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">area: </span>{area}
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">location: </span>{location}
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">status: </span>{status}
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">price: </span>{price}
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">facilities: </span>{
+            facilities.map((facility, idx) => <li key={idx}>
+
+              {facility}
+
+            </li>)
+          }
+        </p>
+        <p className="text-sm">
+          <span className="text-base font-bold">description: </span>{description}
+        </p>
+        {/* <p className="text-sm">
+              <span className="text-base font-bold">status: </span>{status}
+            </p> */}
+        <input type="text" placeholder="Add a comment..." className="w-full py-0.5 dark:bg- border-none rounded text-sm pl-0 dark:text-gray-800" />
+      </div>
     </div>
+
+    // </div >
   );
 };
 
