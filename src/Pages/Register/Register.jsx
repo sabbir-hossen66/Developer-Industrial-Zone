@@ -81,7 +81,9 @@ const Register = () => {
   }
 
   return (
-    <div className="my-8 max-w-2xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-white">
+    <div data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine" className="my-8 max-w-2xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-white">
       <h1 className="text-2xl font-bold text-center text-yellow-600">Please Sign UP</h1>
 
       <form onSubmit={handleSignUP} className="space-y-6">

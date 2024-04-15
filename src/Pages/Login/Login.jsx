@@ -38,7 +38,8 @@ const Login = () => {
 
   return (
 
-    <div className="my-10 max-w-2xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-white">
+    <div data-aos="fade-up"
+      data-aos-anchor-placement="center-center" className="my-10 max-w-2xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-white">
       <h1 className="text-2xl font-bold text-center text-yellow-600">Please Login</h1>
 
       <form onSubmit={handleLogin} className="space-y-6">
