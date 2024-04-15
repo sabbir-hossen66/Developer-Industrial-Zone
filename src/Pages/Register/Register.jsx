@@ -1,9 +1,17 @@
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
+
 
 
 const Register = () => {
+
+  // use context
+
+  const { createUser } = useContext(AuthContext)
+  console.log(createUser);
+
   const [nameErr, nameSetErr] = useState('')
   const [urlErr, urlSetErr] = useState('')
   const [emailErr, emailSetErr] = useState('')
@@ -21,6 +29,16 @@ const Register = () => {
     const photo = form.get('photo URL')
     const password = form.get('password')
     console.log(name, email, photo, password);
+
+    createUser(email, password)
+      .then(result => {
+        const man = result.user;
+        console.log(man);
+      })
+      .catch(error => {
+        const errorMessege = error.messege;
+        console.log(errorMessege);
+      })
 
 
     // error handle
@@ -87,7 +105,7 @@ const Register = () => {
           </div>
           <p className='text-red-500'>{PasswordErr}</p>
         </div>
-        <input type="submit" value="sign in" className="cursor-pointer block w-1/4 mx-auto p-3 text-center rounded-xl dark:text-gray-50 dark:bg-gray-600" />
+        <input type="submit" value="sign Up" className="cursor-pointer block w-1/4 mx-auto p-3 text-center rounded-xl dark:text-gray-50 dark:bg-gray-600" />
         {/* <input type="submit" value="submit" /> */}
 
       </form>
