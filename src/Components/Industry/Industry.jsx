@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 
+
 const Industry = ({ industry }) => {
   const { id, estate_title, segment_name, description, status, price, area, location, image } = industry
   return (
@@ -17,7 +18,7 @@ const Industry = ({ industry }) => {
             <p className="dark:text-gray-800"><span className="font-bold text-indigo-600">price: </span>{price}</p>
             <p className="dark:text-gray-800"><span className="font-bold text-indigo-600">description: </span>{description.slice(0, 25)}</p>
           </div>
-          <Link to={`/industry/${industry.id}`}>
+          <Link to={`/industry/${id}`}>
             <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md border bg-indigo-500 text-white ">View Property</button>
           </Link>
         </div>

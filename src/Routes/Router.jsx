@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import IndustryDetail from "../Pages/IndustryDetail/IndustryDetail";
+import PrivetRoute from "./PrivetRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +16,11 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/industry/:id",
+        element: <PrivetRoute><IndustryDetail></IndustryDetail></PrivetRoute>,
+        loader: () => fetch('/api.json')
       },
       {
         path: "/about",
