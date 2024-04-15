@@ -1,7 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import photo from '../../assets/images/profile.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const Header = () => {
+
+  const { user, logOut } = useContext(AuthContext)
+  console.log(user);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch()
+  }
 
   const navLinks = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
@@ -29,16 +40,45 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+
+        {
+          user ?
+            <div className="flex justify-center items-center">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img alt="Tailwind CSS Navbar component" src={photo} />
+                </div>
+              </div>
+
+              <div>
+
+                <button onClick={handleLogOut} type="button" className="relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">LogOut
+
+                </button>
+
+              </div>
+
+            </div>
+            :
+            <div>
+              <Link to='/login'>
+                <button type="button" className="relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Login
+
+                </button>
+              </Link>
+            </div>
+        }
+
+        {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <img alt="Tailwind CSS Navbar component" src={photo} />
           </div>
-        </div>
-        <Link to='/login'>
+        </div> */}
+        {/* <Link to='/login'>
           <button type="button" className="relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Login
 
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
