@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const { user } = useContext(AuthContext)
@@ -14,6 +15,9 @@ const Profile = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Dev Indsutry | Profile</title>
+      </Helmet>
       <h2 data-aos="zoom-out" className="text-3xl font-bold text-blue-600 text-center py-8">Wow ! You Can See Your Profile</h2>
 
       <div data-aos="zoom-in" className="shadow-xl py-8 w-2/6 mx-auto rounded">

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   useEffect(() => {
@@ -14,7 +15,11 @@ const Contact = () => {
     )
   }, []);
   return (
-    <div className=''>
+
+    <div>
+      <Helmet>
+        <title>Dev Industry | Contact</title>
+      </Helmet>
       <h2 data-aos="fade-down" className="text-center text-3xl font-bold py-8 text-fuchsia-600">You Can Reach Us</h2>
       <section data-aos="fade-right" className="py-9 bg-fuchsia-300">
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
