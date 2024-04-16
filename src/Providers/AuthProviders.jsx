@@ -16,10 +16,16 @@ const AuthProviders = ({ children }) => {
   }
 
   // google sign in
-
   const googleSignIn = (provider) => {
     setLoading(true)
     return signInWithPopup(auth, provider)
+  }
+
+  // github sign in
+
+  const githubSignIn = (githubProvider) => {
+    setLoading(true)
+    return signInWithPopup(auth, githubProvider)
   }
 
   const signIn = (email, password) => {
@@ -49,6 +55,7 @@ const AuthProviders = ({ children }) => {
     signIn,
     logOut,
     googleSignIn,
+    githubSignIn,
     loading
   }
 
