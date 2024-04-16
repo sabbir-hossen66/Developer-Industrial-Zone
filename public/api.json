@@ -37,8 +37,8 @@
   },
   {
     "id": 3,
-    "estate_title": "MetroWare Industrial Complex",
-    "segment_name": "Logistics and Distribution",
+    "estate_title": "MetroWare Industrial",
+    "segment_name": "Logistics Car",
     "description": "MetroWare Industrial Complex offers premium logistics and distribution facilities with advanced warehousing solutions. Strategically positioned near major transport routes, it ensures efficient supply chain operations for businesses of all sizes.",
     "status": "sale",
     "price": "$5,000,000",
@@ -73,7 +73,7 @@
   },
   {
     "id": 5,
-    "estate_title": "TechHub Industrial Campus",
+    "estate_title": "TechHub Industrial",
     "segment_name": "Research and Development",
     "description": "TechHub Industrial Campus is dedicated to research and development activities, providing specialized labs, collaborative workspaces, and access to cutting-edge technology. It fosters innovation and creativity for businesses pushing the boundaries of technology.",
     "status": "sale",
