@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import photo from '../../assets/images/profile.png'
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 
@@ -18,19 +17,22 @@ const Header = () => {
     });
   }, []);
 
-  const { user, logOut } = useContext(AuthContext)
-  console.log(user);
+  const { user, logOut, } = useContext(AuthContext)
+
 
   const handleLogOut = () => {
     logOut()
       .then()
       .catch()
+
+
   }
+
 
   const navLinks = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/contact'}>Contact</NavLink></li>
-    <li><NavLink to={'/up-profile'}>Update Profile</NavLink></li>
+    <li><NavLink to={'/up-profile'}> Profile</NavLink></li>
     {/* <li><NavLink to={'/login'}>Login</NavLink></li> */}
   </>
 
@@ -59,7 +61,9 @@ const Header = () => {
             <div className="flex justify-center items-center">
               <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img alt="Tailwind CSS Navbar component" src={photo} />
+
+                  <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+
                 </div>
               </div>
 

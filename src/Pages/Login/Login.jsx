@@ -1,6 +1,6 @@
 
 import { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 import { GoogleAuthProvider } from "firebase/auth";
 
@@ -14,7 +14,7 @@ const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext)
 
   const provider = new GoogleAuthProvider();
-
+  const location = useLocation()
   const navigate = useNavigate()
 
   const handleLogin = (e) => {
@@ -58,8 +58,7 @@ const Login = () => {
 
   return (
 
-    <div data-aos="fade-up"
-      data-aos-anchor-placement="center-center" className="my-10 max-w-2xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-white">
+    <div className="my-10 max-w-2xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-white">
       <h1 className="text-2xl font-bold text-center text-yellow-600">Please Login</h1>
 
       <form onSubmit={handleLogin} className="space-y-6">

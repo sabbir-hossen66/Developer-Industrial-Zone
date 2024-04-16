@@ -8,6 +8,7 @@ import Register from "../Pages/Register/Register";
 import IndustryDetail from "../Pages/IndustryDetail/IndustryDetail";
 import PrivetRoute from "./PrivetRoute";
 import Contact from "../Pages/Contact/Contact";
+import Profile from "../Pages/Profile/Profile";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/up-profile",
-        element: <div>up-profile</div>,
+        element: <PrivetRoute><Profile></Profile></PrivetRoute>,
       },
       {
         path: "/login",

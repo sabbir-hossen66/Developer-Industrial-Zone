@@ -12,9 +12,10 @@ const IndustryDetail = () => {
   return (
 
     <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800 mx-auto p-6">
+      <h2 data-aos="fade-down-right" className="text-3xl font-bold text-violet-600 text-center mt-4 mb-3">Showing Detail</h2>
       <div>
-        <img src={image} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
-        <div className="p-3">
+        <img data-aos="flip-left" src={image} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
+        <div data-aos="flip-right" className="p-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <button type="button" title="Like post" className="flex items-center justify-center">
@@ -44,7 +45,7 @@ const IndustryDetail = () => {
         </div>
       </div>
 
-      <div className="space-y-3">
+      <div data-aos="flip-right" className="space-y-3">
         <p className="text-sm">
           <span className="text-base font-bold">estate_title: </span>{estate_title}
         </p>
