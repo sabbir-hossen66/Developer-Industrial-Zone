@@ -6,6 +6,8 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { Helmet } from 'react-helmet-async';
 import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -29,12 +31,13 @@ const Login = () => {
     const form = new FormData(e.currentTarget);
     const email = form.get('email')
     const password = form.get('password')
+
     // loginError('')
     // loginSuccess('')
 
     signIn(email, password)
       .then(result => {
-        setLoginSuccess('Login successfully', result.user)
+        setLoginSuccess(result.user, 'successfully login')
 
         // navigate
         navigate(location?.state ? location.state : "/")
@@ -72,7 +75,7 @@ const Login = () => {
         const githubError = error.message;
         setGithubSignUser(githubError);
       })
-
+    // toast.success('successfully login')
   }
 
   return (
@@ -139,10 +142,16 @@ const Login = () => {
 
         {
           loginError ? <p className="text-red-400 font-bold">password is wrong</p> :
-            loginSuccess && <p className="text-green-400"> succesfully</p>
+            // loginSuccess && <ToastContainer
+            //   position="top-right"
+            //   reverseOrder={false}
+
+            // />
+            loginSuccess && <p className="text-2xl text-green-500">{loginSuccess}</p>
         }
 
       </div >
+
     </>
   );
 };
