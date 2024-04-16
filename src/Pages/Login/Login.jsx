@@ -61,6 +61,7 @@ const Login = () => {
     githubSignIn(githubProvider)
       .then(result => {
         const githubUser = result.user;
+        console.log(githubUser);
         setGithubSignUser(githubUser);
         navigate(location?.state ? location.state : "/")
       })

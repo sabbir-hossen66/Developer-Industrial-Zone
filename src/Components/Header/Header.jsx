@@ -59,20 +59,20 @@ const Header = () => {
         {
           user ?
             <div className="flex justify-center items-center">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
 
+              <div tabIndex={0} role="button" className=" btn btn-ghost btn-circle avatar ">
+                <div className="w-10 rounded-full hover:relative">
                   <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                </div>
 
+                <div className="hidden absolute top-full bg-violet-500 text-white px-2 py-1 rounded-lg opacity-5 hover:opacity-100 duration-4000">
+                  {user.displayName}
                 </div>
               </div>
 
               <div>
-
                 <button onClick={handleLogOut} type="button" className="relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">LogOut
-
                 </button>
-
               </div>
 
             </div>
@@ -92,3 +92,11 @@ const Header = () => {
 };
 
 export default Header;
+
+
+{/* <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 relative">
+  Hover me
+  < span class="hidden absolute top-full left-0 bg-gray-800 text-white px-2 py-1 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300" >
+    Hidden Text
+  </ >
+</button > */}
