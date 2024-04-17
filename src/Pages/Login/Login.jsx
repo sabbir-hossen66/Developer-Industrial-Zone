@@ -46,7 +46,7 @@ const Login = () => {
         Swal.fire({
           title: 'Successfully Login!',
           text: 'Do you want to continue',
-          icon: 'error',
+          icon: 'success',
           confirmButtonText: 'Cool'
         })
 
@@ -66,6 +66,12 @@ const Login = () => {
         const googleUser = result.user;
         setGoogleUser(googleUser);
         navigate(location?.state ? location.state : "/")
+        Swal.fire({
+          title: 'Successfully Google Login!',
+          text: 'Do you want to continue',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
 
       })
       .catch(error => {
@@ -81,6 +87,12 @@ const Login = () => {
         console.log(githubUser);
         setGithubSignUser(githubUser);
         navigate(location?.state ? location.state : "/")
+        Swal.fire({
+          title: 'Successfully GitHub Login!',
+          text: 'Do you want to continue',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
       })
       .catch(error => {
         const githubError = error.message;

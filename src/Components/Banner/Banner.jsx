@@ -36,34 +36,28 @@ const Banner = () => {
         <SwiperSlide className="relative">
           <img className='h-[560px] w-5/6 mx-auto rounded-lg ' src={bannerOne} alt="" />
           <div className="absolute inset-0 flex items-center gap-4 justify-center">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-              Exploring Our Industries
+            <button className="bg-indigo-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-xl">
+              EXPLORING OUR INDUSTRIES
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-              See All Our Project
-            </button>
+
           </div>
         </SwiperSlide>
         <SwiperSlide className='relative'>
           <img className='h-[560px] w-5/6 mx-auto rounded-lg' src={bannerTwo} alt="" />
           <div className="absolute inset-0 flex items-center gap-4 justify-center">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-              Exploring Our Industries
+            <button className="bg-indigo-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-xl">
+              EXPLORING OUR INDUSTRIES
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-              See All Our Project
-            </button>
+
           </div>
         </SwiperSlide>
         <SwiperSlide className='relative'>
           <img className='h-[560px] w-5/6 mx-auto rounded-lg' src={bannerThree} alt="" />
           <div className="absolute inset-0 flex items-center gap-4 justify-center">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-              Exploring Our Industries
+            <button className="bg-indigo-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-xl">
+              EXPLORING OUR INDUSTRIES
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-              See All Our Project
-            </button>
+
           </div>
         </SwiperSlide>
 
