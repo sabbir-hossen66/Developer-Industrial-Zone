@@ -4,9 +4,12 @@ const Review = () => {
   return (
     <div>
       <h2 data-aos="zoom-out-down" className="text-3xl pt-16  text-center font-bold text-fuchsia-500">Our Customers Review</h2>
-      <div data-aos="zoom-out-up" className="grid grid-cols-3 gap-4 rounded-md py-10 ">
+      <div data-aos="zoom-out-up" className="grid sm:grid-cols-1 lg:grid-cols-3 gap-4 rounded-md py-10 ">
 
-        <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+        {/* container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md md:flex-col md:w-full md:max-w-lg md:p-6 md:mx-auto dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800 */}
+
+
+        <div className="container flex  flex-col  lg:w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
           <div className="flex justify-between p-4">
             <div className="flex space-x-4">
               <div>

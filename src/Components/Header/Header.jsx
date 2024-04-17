@@ -37,7 +37,7 @@ const Header = () => {
   </>
 
   return (
-    <div data-aos="fade-down" className="navbar bg-base-100 py-4">
+    <div data-aos="fade-down" className="navbar bg-indigo-50 rounded-md sticky top-0 z-50 pt-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
