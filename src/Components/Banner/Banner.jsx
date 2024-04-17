@@ -33,8 +33,12 @@ const Banner = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="relative">
           <img className='h-[560px] w-5/6 mx-auto rounded-lg' src={bannerOne} alt="" />
+          {/* <p className=' text-3xl '>hello </p> */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p className="text-3xl font-bold">THESE ARE OUR INDUSTRY</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img className='h-[560px] w-5/6 mx-auto rounded-lg' src={bannerTwo} alt="" />

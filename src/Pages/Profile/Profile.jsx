@@ -11,7 +11,7 @@ const Profile = () => {
 
 
   const handleUpdateProfile = () => {
-    toast.success('Successfully toasted!')
+    toast.success('Profile Uptaded!')
   }
 
   return (
