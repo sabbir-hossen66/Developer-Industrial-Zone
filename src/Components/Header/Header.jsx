@@ -32,7 +32,7 @@ const Header = () => {
   const navLinks = <>
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/contact'}>Contact</NavLink></li>
-    <li><NavLink to={'/up-profile'}> Profile</NavLink></li>
+    <li><NavLink to={'/up-profile'}>UserProfile</NavLink></li>
     {/* <li><NavLink to={'/login'}>Login</NavLink></li> */}
   </>
 

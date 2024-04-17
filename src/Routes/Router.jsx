@@ -9,7 +9,7 @@ import IndustryDetail from "../Pages/IndustryDetail/IndustryDetail";
 import PrivetRoute from "./PrivetRoute";
 import Contact from "../Pages/Contact/Contact";
 import Profile from "../Pages/Profile/Profile";
-import UpdatedProfile from "../Pages/UpdatedProfile/UpdatedProfile";
+import Services from "../Pages/Services/Services";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -34,8 +34,8 @@ export const router = createBrowserRouter([
         element: <PrivetRoute><Profile></Profile></PrivetRoute>,
       },
       {
-        path: "/updated-profile",
-        element: <UpdatedProfile></UpdatedProfile>,
+        path: "/service",
+        element: <Services></Services>,
       },
       {
         path: "/login",
