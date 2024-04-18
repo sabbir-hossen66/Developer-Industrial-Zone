@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
-
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,8 +23,6 @@ const Header = () => {
     logOut()
       .then()
       .catch()
-
-
   }
 
 
@@ -77,10 +74,6 @@ const Header = () => {
                   <div className="w-10 rounded-full hover:relative">
                     <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                   </div>
-
-                  {/* <div className="hidden absolute top-full bg-violet-500 text-white px-2 py-1 rounded-lg opacity-5 hover:opacity-100 duration-4000">
-                    {user.displayName}
-                  </div> */}
                 </div>
                 <ul tabIndex={0} className="dropdown-content z-[1] mb-2 menu p-2 shadow bg-indigo-400 font-semibold rounded-box w-40 text-white">
                   <li>Name- {user.displayName}</li>

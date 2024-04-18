@@ -12,13 +12,7 @@ const AnotherUpProfile = () => {
 
   const handleUpdated = () => {
     updatePRf(userName, userUrl)
-    toast.success('wow profile is updated & if You want to see Updated thing pls go to userProfile page')
-      // .then(() => {
-      //   toast.success("Wow Profile is Updated!");
-      // })
-      .catch(error => {
-        console.log(error);
-      })
+    toast.success('profile is updated & if You want to see Updated thing pls go to userProfile page')
   }
 
   return (
