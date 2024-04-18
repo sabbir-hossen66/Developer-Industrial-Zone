@@ -3,14 +3,16 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
 
 
 const Profile = () => {
   const { user } = useContext(AuthContext)
 
 
-
   const handleUpdateProfile = () => {
+
     toast.success('Profile is Seeing!')
   }
 
@@ -31,7 +33,7 @@ const Profile = () => {
             <div className="font-bold">
               {user.displayName}
             </div>
-            <input type="text" className="grow" placeholder="" />
+            {/* <input type="text" name="name" className="grow" placeholder="" /> */}
           </label>
 
 
@@ -39,19 +41,20 @@ const Profile = () => {
             <div className="font-bold">
               {user.email}
             </div>
-            <input type="text" className="grow" placeholder="" />
+            {/* <input type="text" className="grow" placeholder="" /> */}
           </label>
-          <label className="input input-bordered border-2 mt-2 border-blue-600  shadow-md flex items-center gap-2 overflow-x-scroll h-20">
-            <div className="font-bold ">
+          <label className="input input-bordered border-2 mt-2  border-blue-600  shadow-md flex items-center gap-2  h-20">
+            <div className="font-bold overflow-hidden ">
               {user?.photoURL}
             </div>
-            <input type="text" className="grow" placeholder="" />
+            {/* <input type="text" name="photoURL" className="grow" placeholder="" /> */}
           </label>
 
-          <button onClick={handleUpdateProfile} className="bg-blue-500 hover:bg-fuchsia-600 text-white font-bold py-2 w-full mt-6 none rounded">
-            See Profile
-          </button>
-
+          <Link to={'/another-upProfile'}>
+            <button onClick={handleUpdateProfile} className="bg-blue-500 hover:bg-fuchsia-600 text-white font-bold py-2 w-full mt-6 none rounded">
+              Go to Update Profile
+            </button>
+          </Link>
         </div>
       </div>
       <ToastContainer

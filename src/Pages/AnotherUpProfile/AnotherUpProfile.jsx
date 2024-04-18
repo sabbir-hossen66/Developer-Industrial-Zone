@@ -1,25 +1,36 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
+
+// import { updateProfile } from "firebase/auth";
 const AnotherUpProfile = () => {
-  const { user } = useContext(AuthContext)
-  console.log(user);
+  const [userName, setUserName] = useState(null)
+  const [userUrl, setUserUrl] = useState(null)
+  const { user, updatePRf } = useContext(AuthContext)
 
   const handleUpdated = () => {
-    toast.success("Wow Profile is Updated!");
+    updatePRf(userName, userUrl)
+    toast.success('wow profile is updated & if You want to see Updated thing pls go to userProfile page')
+      // .then(() => {
+      //   toast.success("Wow Profile is Updated!");
+      // })
+      .catch(error => {
+        console.log(error);
+      })
   }
+
   return (
     <div>
       <Helmet>
         <title>Dev Industry | Updated Profile</title>
       </Helmet>
       <div className="py-8">
-        <h2 className="text-center py-4 font-semibold text-3xl text-indigo-500">here is Updated Profile </h2>
+        <h2 className="text-center py-4 font-semibold text-3xl text-indigo-500">Here is Updated Profile </h2>
         <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
           <form noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
-            <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
+            {/* <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
               <div className="space-y-2 col-span-full lg:col-span-1">
                 <p className="font-medium text-2xl">Here Is Adress</p>
                 <p className="text-sm">You Can Write Down Your Adress !</p>
@@ -54,7 +65,10 @@ const AnotherUpProfile = () => {
                   <input id="zip" type="text" placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 0 focus:dark:ring-default-600 dark:border-gray-300" />
                 </div>
               </div>
-            </fieldset>
+            </fieldset> */}
+
+
+
             <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
               <div className="space-y-2 col-span-full lg:col-span-1">
                 <p className="font-medium text-2xl">Personal Information</p>
@@ -62,13 +76,13 @@ const AnotherUpProfile = () => {
               </div>
               <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div className="col-span-full sm:col-span-3">
-                  <label htmlFor="username" className="text-sm">User</label>
-                  <input id="username" type="text" placeholder="Username" className="w-full py-2 rounded-md focus:ring focus:ring-opacity-75 0 focus:dark:ring-default-600 dark:border-gray-300" />
+                  <label htmlFor="username" className="text-sm">User Name</label>
+                  <input onChange={(e) => setUserName(e.target.value)} id="username" name="name" type="text" placeholder="Username" className="w-full py-2 rounded-md focus:ring focus:ring-opacity-75 0 focus:dark:ring-default-600 dark:border-gray-300" />
 
                 </div>
                 <div className="col-span-full sm:col-span-3">
                   <label htmlFor="website" className="text-sm">photo URL</label>
-                  <input id="website" type="text" placeholder="https://" className="w-full rounded-md focus:ring focus:ring-opacity-75 0 focus:dark:ring-default-600 dark:border-gray-300" />
+                  <input onChange={e => setUserUrl(e.target.value)} id="website" name="photoURL" type="text" placeholder="https://" className="w-full rounded-md focus:ring focus:ring-opacity-75 0 focus:dark:ring-default-600 dark:border-gray-300" />
                 </div>
                 <div className="col-span-full">
                   <label htmlFor="bio" className="text-sm">Bio</label>
@@ -79,6 +93,8 @@ const AnotherUpProfile = () => {
                   <div className="flex items-center space-x-2">
                     <img src={user.photoURL} alt="" className="w-10 h-10 dark:bg-gray-500 rounded-full " />
                     <button onClick={handleUpdated} type="button" className="px-4 py-2 border rounded-md bg-indigo-500 font-bold text-white">Profile is Updated</button>
+
+
                     <ToastContainer />
                   </div>
                 </div>
