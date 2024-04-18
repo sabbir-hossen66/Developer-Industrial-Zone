@@ -57,16 +57,6 @@ const Header = () => {
           user ?
             <div className="flex justify-center items-center">
 
-              {/* <div tabIndex={0} role="button" className=" btn btn-ghost btn-circle avatar ">
-                <div className="w-10 rounded-full hover:relative">
-                  <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
-                </div>
-
-                <div className="hidden absolute top-full bg-violet-500 text-white px-2 py-1 rounded-lg opacity-5 hover:opacity-100 duration-4000">
-                  {user.displayName}
-                </div>
-              </div> */}
-
               {/* dropdwon */}
 
               <div className="dropdown dropdown-hover">
