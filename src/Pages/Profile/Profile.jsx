@@ -11,7 +11,7 @@ const Profile = () => {
 
 
   const handleUpdateProfile = () => {
-    toast.success('Profile Uptaded!')
+    toast.success('Profile is Seeing!')
   }
 
   return (
@@ -49,7 +49,7 @@ const Profile = () => {
           </label>
 
           <button onClick={handleUpdateProfile} className="bg-blue-500 hover:bg-fuchsia-600 text-white font-bold py-2 w-full mt-6 none rounded">
-            Update Profile
+            See Profile
           </button>
 
         </div>

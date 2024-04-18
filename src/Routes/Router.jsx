@@ -10,6 +10,7 @@ import PrivetRoute from "./PrivetRoute";
 import Contact from "../Pages/Contact/Contact";
 import Profile from "../Pages/Profile/Profile";
 import Services from "../Pages/Services/Services";
+import AnotherUpProfile from "../Pages/AnotherUpProfile/AnotherUpProfile";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/up-profile",
         element: <PrivetRoute><Profile></Profile></PrivetRoute>,
+      },
+      {
+        path: "/another-upProfile",
+        element: <PrivetRoute><AnotherUpProfile></AnotherUpProfile></PrivetRoute>,
       },
       {
         path: "/service",
