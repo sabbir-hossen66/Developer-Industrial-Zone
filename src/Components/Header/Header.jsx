@@ -4,6 +4,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './Header.css'
 
 const Header = () => {
 
@@ -27,9 +28,9 @@ const Header = () => {
 
 
   const navLinks = <>
-    <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/contact'}>Contact</NavLink></li>
-    <li><NavLink to={'/up-profile'}>UserProfile</NavLink></li>
+    <li className="head-section font-semibold"><NavLink to={'/'}>Home</NavLink></li>
+    <li className="head-section font-semibold"><NavLink to={'/contact'}>Contact</NavLink></li>
+    <li className="head-section font-semibold"><NavLink to={'/up-profile'}>UserProfile</NavLink></li>
     {/* <li><NavLink to={'/login'}>Login</NavLink></li> */}
   </>
 
@@ -40,14 +41,14 @@ const Header = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex={0} className="menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             {navLinks}
           </ul>
         </div>
         <p className="text-sm md:text-xl lg:text-3xl font-bold cursor-pointer "><span className="text-violet-600">Dev Industrial</span>_ <span className="text-fuchsia-600">Zone</span></p>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-4">
+        <ul className=" menu-horizontal px-1 gap-4">
           {navLinks}
         </ul>
       </div>
