@@ -2,8 +2,15 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from 'react-helmet-async';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+
+  const handleSubmit = () => {
+    toast.success("Successfully Submitted!");
+  }
+
   useEffect(() => {
     AOS.init(
       {
@@ -51,17 +58,18 @@ const Contact = () => {
           <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
             <label className="block">
               <span className="mb-1 font-semibold ">Full name</span>
-              <input type="text" placeholder="sabbir hossen" className="block w-full  rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100" />
+              <input type="text" placeholder="" className="block w-full  rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100" />
             </label>
             <label className="block">
               <span className="mb-1 font-semibold">Email address</span>
-              <input type="email" placeholder="sabbir.eng66@gmail.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100" />
+              <input type="email" placeholder="" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100" />
             </label>
             <label className="block">
               <span className="mb-1 font-semibold">Message</span>
               <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100"></textarea>
             </label>
-            <button type="button" className="self-center px-10 py-2 text-lg  overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Submit</button>
+            <button onClick={handleSubmit} type="button" className="self-center px-10 py-2 text-lg  overflow-hidden font-semibold rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Submit</button>
+            <ToastContainer />
           </form>
         </div>
       </section>
